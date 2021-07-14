@@ -1,0 +1,19 @@
+.Header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+    overflow: hidden;
+}
+
+.Logo {
+    height: 70px;
+}
+
+.Logo img {
+    height: 100%;
+    object-fit: contain;
+
+}

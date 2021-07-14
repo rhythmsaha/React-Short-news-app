@@ -1,0 +1,36 @@
+.menuIcon {
+    position: absolute;
+    left: 1rem;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    transition: 250ms linear;
+}
+
+.menuIcon_Open {
+    left: 210px;
+}
+
+.menuIcon img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.Sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -200px;
+    background: #1f1f1f;
+    color: white;
+    width: 200px;
+    transition: 250ms linear;
+}
+
+.Sidebar_Open {
+    left: 0;
+}
