@@ -1,36 +1,68 @@
 .menuIcon {
-    position: absolute;
-    left: 1rem;
-    background: none;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    height: 30px;
-    width: 30px;
-    transition: 250ms linear;
+  position: absolute;
+  left: 1rem;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+  transition: 250ms;
 }
 
 .menuIcon_Open {
-    left: 210px;
+  left: 210px;
 }
 
-.menuIcon img{
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
+.menuIcon img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
 }
 
 .Sidebar {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: -200px;
-    background: #1f1f1f;
-    color: white;
-    width: 200px;
-    transition: 250ms linear;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: -200px;
+  background: #303036;
+  color: white;
+  width: 200px;
+  transition: 250ms;
+  padding: 8px;
 }
 
 .Sidebar_Open {
-    left: 0;
+  left: 0;
+}
+
+.Category__Header {
+  font-size: 14px;
+  color: #808290;
+  margin: 10px 0 5px 8px;
+}
+
+.Category__Link a {
+  display: block;
+  text-decoration: none;
+  height: 38px;
+  font-size: 16px;
+  padding-left: 28px;
+  padding-top: 9px;
+  border-radius: 2px;
+  margin-top: 3px;
+  color: #fff;
+  font-weight: 300;
+}
+
+.Category__Link a:hover {
+  background-color: #44444d;
+}
+
+.Selected {
+  background: #808290;
+}
+
+.Selected:hover {
+  background: #808290 !important;
 }

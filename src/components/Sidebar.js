@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import classes from "./styles/Sidebar.module.css";
 import Categories from "../Categories";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Sidebar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -27,11 +27,17 @@ const Sidebar = () => {
         />
       </button>
       <aside className={sidebarClass}>
-        <div>Categories</div>
+        <div className={classes.Category__Header}>Categories</div>
         <ul classes={classes.Category__Container}>
           {Categories.map((category) => (
-            <li key={category.id}>
-              <Link to={category.link}>{category.title}</Link>
+            <li key={category.id} className={classes.Category__Link}>
+              <NavLink
+                activeClassName={classes.Selected}
+                to={category.link}
+                onClick={toggleSidebarHandler}
+              >
+                {category.title}
+              </NavLink>
             </li>
           ))}
         </ul>
