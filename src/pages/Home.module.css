@@ -35,6 +35,17 @@
   object-fit: contain;
 }
 
+@media screen and (max-width: 900px) {
+  .DownloadApp__Text {
+    font-size: 14px;
+  }
+
+  .appstoreLogos {
+    height: 30px;
+    align-self: center;
+  }
+}
+
 .News__Section {
   width: 100%;
 }

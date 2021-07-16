@@ -20,6 +20,12 @@ const Sidebar = () => {
 
   return (
     <>
+      {isSidebarOpen && (
+        <div
+          className={classes.Sidebar__Backdrop}
+          onClick={toggleSidebarHandler}
+        />
+      )}
       <button className={togglerClass} onClick={toggleSidebarHandler}>
         <img
           src="https://img.icons8.com/material-sharp/24/000000/menu--v1.png"

@@ -8,6 +8,7 @@
   height: 30px;
   width: 30px;
   transition: 250ms;
+  z-index: 99;
 }
 
 .menuIcon_Open {
@@ -30,6 +31,7 @@
   width: 200px;
   transition: 250ms;
   padding: 8px;
+  z-index: 99;
 }
 
 .Sidebar_Open {
@@ -65,4 +67,19 @@
 
 .Selected:hover {
   background: #808290 !important;
+}
+
+@media screen and (max-width: 700px) {
+  .Sidebar__Backdrop {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #ffffffa6;
+    z-index: 1;
+  }
+  .menuIcon {
+    left: 1rem;
+  }
 }
