@@ -2,7 +2,7 @@ const Categories = [
   {
     id: "1",
     title: "General",
-    link: "/general",
+    link: "/",
   },
   {
     id: "2",

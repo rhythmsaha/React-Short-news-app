@@ -38,6 +38,7 @@ const Sidebar = () => {
           {Categories.map((category) => (
             <li key={category.id} className={classes.Category__Link}>
               <NavLink
+                exact
                 activeClassName={classes.Selected}
                 to={category.link}
                 onClick={toggleSidebarHandler}

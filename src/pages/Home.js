@@ -7,16 +7,22 @@ import classes from "./Home.module.css";
 
 const Home = () => {
   const [news, setNews] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
   const { category } = useParams();
 
   const fetchNewsHandler = useCallback(() => {
+    setIsLoading(true);
     axios
       .get(
         `https://saurav.tech/NewsAPI/top-headlines/category/${
           category ? category : "general"
         }/in.json`
       )
-      .then((res) => setNews(res.data.articles));
+      .then((res) => {
+        setNews(res.data.articles);
+        setIsLoading(false);
+      })
+      .catch((err) => console.log(err.message));
   }, [category]);
 
   useEffect(() => {
@@ -47,11 +53,13 @@ const Home = () => {
           </div>
         </div>
         <section className={classes.News__Section}>
-          <ul className={classes.News__List}>
-            {news.map((article, index) => (
-              <NewsItem key={index} news={article} />
-            ))}
-          </ul>
+          {!isLoading && (
+            <ul className={classes.News__List}>
+              {news.map((article, index) => (
+                <NewsItem key={index} news={article} />
+              ))}
+            </ul>
+          )}
         </section>
       </main>
       <Footer />
