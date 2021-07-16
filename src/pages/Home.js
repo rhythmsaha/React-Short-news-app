@@ -28,7 +28,7 @@ const Home = () => {
       <main>
         <div className={classes.DownloadApp}>
           <div className={classes.DownloadApp__Text}>
-            For the best experience use <strong>inshorts</strong> app on your
+            For the best experience use <strong>Shorts</strong> app on your
             smartphone
           </div>
           <div className={classes.DownloadApp__Stores}>
