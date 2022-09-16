@@ -1,8 +1,14 @@
 .Footer {
-  height: 200px;
-  background: #1f1f1f;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    height: 200px;
+    background: #1f1f1f;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
 }
